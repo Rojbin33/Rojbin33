@@ -1,0 +1,35 @@
+import discord
+from discord.ext import commands
+import random
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'{bot.user} olarak giriş yaptık')
+
+@bot.command()
+async def hava_kirliliğini_nasıl_azaltabiliriz(ctx):
+    await ctx.send(f'toplu taşıma artırılmalı  ')
+
+@bot.command()
+async def Doğayı_neden_korulamlıyız(ctx):
+    await ctx.send(f'Çünkü doğa bizim tek fotosentez kaynağımızdır  ')
+
+@bot.command()
+async def Plastik_kullanımını_nasıl_azaltırız(ctx):
+    await ctx.send(f'Marketlerde pilastik poşet kullanmayıp bez_poşet kullanabiliriz Pet şişe yerine kişisel matara kullanabiliriz')
+@bot.command()
+async def Toprak_kirliliği_nasıl_azaltılabilir(ctx):
+    await ctx.send(f'Tarımda organik gübre kullanımı artırılabilir, sanayi atıklarının düzenli bir şekilde bertaraf edilmesi sağlanabilir ve geri dönüşüm alışkanlığı yaygınlaştırılabilir.z')
+@bot.command()
+async def Su_kirliliğini_azaltmak_için_birey_olarak_neler_yapabiliriz(ctx):
+    await ctx.send(f'Evlerde zararlı kimyasalları lavabolara dökmemeliyiz, geri dönüşümü desteklemeliyiz ve plastik atıkları su kaynaklarına atmaktan kaçınmalıyız.')
+@bot.command()
+async def Gürültü_kirliliğinin_etkilerini_azaltmak_için_ne_yapılabilir(ctx):
+    await ctx.send(f'Marketlerde pilastik poşet kullanmayıp bez_poşet kullanabiliriz Pet şişe yerine kişisel matara kullanabiliriz')
+
+
